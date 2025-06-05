@@ -1,14 +1,55 @@
-/* Ensure the entire page background is pure black */
-html,
-body {
+/* ----------------------------------
+   RESET + GLOBAL
+----------------------------------- */
+* {
   margin: 0;
   padding: 0;
-  background-color: #000000;
+  box-sizing: border-box;
 }
 
-/* Make the banner image span full width */
+html,
+body {
+  background-color: #000000;
+  color: #fff; /* default text color white */
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ----------------------------------
+   TOP NAVIGATION BAR
+----------------------------------- */
+.top-nav {
+  background-color: #000000; /* same as page background */
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #222; /* subtle separation line */
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.nav-list li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.nav-list li a:hover {
+  text-decoration: underline;
+}
+
+/* ----------------------------------
+   BANNER
+----------------------------------- */
 .banner-image {
   display: block;
   width: 100%;
   height: auto;
 }
+
+/* (Additional content styling can go here) */
