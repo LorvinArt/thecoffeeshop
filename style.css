@@ -7,7 +7,6 @@
   box-sizing: border-box;
 }
 
-/* Apply “Special Elite” font everywhere, at 127px */
 html,
 body {
   background-color: #000000;
@@ -21,6 +20,9 @@ body {
    TOP NAVIGATION BAR
 ----------------------------------- */
 .top-nav {
+  /* Add space above the navbar */
+  margin-top: 20px;
+
   background-color: #000000;
   padding: 0.5rem 0;
   border-bottom: 1px solid #222;
