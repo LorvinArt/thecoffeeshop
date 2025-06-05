@@ -7,42 +7,42 @@
   box-sizing: border-box;
 }
 
+/* Apply “Special Elite” font everywhere, at 127px */
 html,
 body {
   background-color: #000000;
-  color: #fff; /* default text color white */
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
+  color: #fff;
+  font-family: 'Special Elite', cursive;
+  font-size: 127px;
+  line-height: 1.2; /* adjust if needed */
 }
 
 /* ----------------------------------
    TOP NAVIGATION BAR
 ----------------------------------- */
 .top-nav {
-  background-color: #000000; /* same as page background */
+  background-color: #000000;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #222; /* subtle separation line */
+  border-bottom: 1px solid #222;
 }
 
-/* Make the list items sit in a single horizontal row */
+/* Horizontal list */
 .nav-list {
   list-style: none;
-  display: flex;            /* horizontal layout */
-  flex-direction: row;      /* ensure they're all in one row */
-  justify-content: center;  /* center the row */
-  gap: 2rem;                /* space between links */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
 }
 
-/* Make each link’s text white (override default blue) */
+/* Links in white (override default blue) */
 .nav-list li a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 0.9rem;
   text-transform: uppercase;
 }
 
-/* Underline on hover to indicate it's clickable */
+/* Underline on hover */
 .nav-list li a:hover {
   text-decoration: underline;
 }
@@ -55,6 +55,5 @@ body {
   width: 100%;
   height: auto;
 }
-
 
 /* (Additional content styling can go here) */
