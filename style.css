@@ -71,24 +71,24 @@ body {
 }
 
 /* ----------------------------------
-   SMALLER TWITCH EMBED
+   EMBEDDED TWITCH (MADE BIGGER)
 ----------------------------------- */
 .twitch-section {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;        /* small gap from banner */
+  margin-top: 1rem;
 }
 
-/* Restrict the embed to a 640×360 (16:9) box that scales down */
+/* Increase max-width to 800px (height 450px for 16:9) */
 .twitch-wrapper {
   width: 100%;
-  max-width: 640px;        /* desktop width */
+  max-width: 800px;  /* was 640px */
   height: auto;
 }
 
 .twitch-wrapper iframe {
   width: 100%;
-  height: 360px;           /* fixed 360px height keeps full offline screen */
+  height: 450px;     /* was 360px */
   border: 0;
 }
 
@@ -96,13 +96,5 @@ body {
    MOBILE ADJUSTMENTS (≤ 600px)
 ----------------------------------- */
 @media (max-width: 600px) {
-  .twitch-wrapper iframe {
-    height: 240px;         /* scale down a bit more on small phones */
-  }
-  .nav-list {
-    gap: 1rem;
-  }
-  .nav-list li a {
-    font-size: 0.5em;      /* 0.5 * 20px = 10px */
-  }
-}
+  /* Shrink embed height to 300px on phones */
+  .twi
