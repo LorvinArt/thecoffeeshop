@@ -13,16 +13,26 @@ body {
   color: #fff;
   font-family: 'Special Elite', cursive;
   font-size: 127px;
-  line-height: 1.2; /* adjust if needed */
+  line-height: 1.2;
+}
+
+/* ----------------------------------
+   TOP BANNER (CCC)
+----------------------------------- */
+.top-banner {
+  width: 100%;
+  background-color: #000000; /* ensures black behind any transparent areas */
+}
+.top-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 /* ----------------------------------
    TOP NAVIGATION BAR
 ----------------------------------- */
 .top-nav {
-  /* Add space above the navbar */
-  margin-top: 200px;
-
   background-color: #000000;
   padding: 0.5rem 0;
   border-bottom: 1px solid #222;
@@ -37,7 +47,7 @@ body {
   gap: 2rem;
 }
 
-/* Links in white (override default blue) */
+/* Links in white */
 .nav-list li a {
   color: #ffffff;
   text-decoration: none;
@@ -50,7 +60,7 @@ body {
 }
 
 /* ----------------------------------
-   BANNER
+   MAIN BANNER
 ----------------------------------- */
 .banner-image {
   display: block;
