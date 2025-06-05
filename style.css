@@ -12,7 +12,7 @@ body {
   background-color: #000000;
   color: #fff;
   font-family: 'Special Elite', cursive;
-  font-size: 20px; /* Reduced from 127px to 20px */
+  font-size: 20px; /* base font-size */
   line-height: 1.2;
 }
 
@@ -21,7 +21,7 @@ body {
 ----------------------------------- */
 .top-banner {
   width: 100%;
-  background-color: #000000; /* black behind any transparency */
+  background-color: #000000;
 }
 .top-banner-image {
   display: block;
@@ -37,15 +37,15 @@ body {
   padding: 0.5rem 0;
 }
 
-/* Make the nav items display in a row, wrap if needed */
+/* Flexible horizontal list, wraps if necessary */
 .nav-list {
   list-style: none;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;         /* allow wrapping on narrow screens */
+  flex-wrap: wrap;       /* allow wrapping on narrow screens */
   justify-content: center;
-  gap: 2rem;
-  padding: 0 1rem;         /* small horizontal padding */
+  gap: 2rem;             /* default gap between links */
+  padding: 0 1rem;       /* horizontal padding inside navbar */
 }
 
 /* Links in white and uppercase */
@@ -53,8 +53,8 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 1em;          /* 1em = 20px now */
-  white-space: nowrap;     /* prevent word breaks inside each link */
+  font-size: 1em;        /* 1em = 20px base */
+  white-space: nowrap;   /* prevent each link from breaking mid-word */
 }
 
 /* Underline on hover */
@@ -72,14 +72,13 @@ body {
 }
 
 /* ----------------------------------
-   TWITCH SECTION (Responsive 16:9 embed)
+   TWITCH SECTION (16:9 embed)
 ----------------------------------- */
-/* Wrapper that maintains 16:9 aspect ratio */
 .twitch-wrapper {
   position: relative;
   width: 100%;
-  padding-top: 56.25%;    /* 9/16 = 0.5625 → 56.25% */
-  margin-top: 1rem;       /* small gap from banner */
+  padding-top: 56.25%;    /* 16:9 aspect ratio */
+  margin-top: 1rem;
 }
 
 .twitch-wrapper iframe {
@@ -91,4 +90,15 @@ body {
   border: 0;
 }
 
-/* (Additional content styling can go here) */
+/* ----------------------------------
+   MOBILE‐SPECIFIC ADJUSTMENTS
+----------------------------------- */
+/* At widths ≤ 600px: reduce nav font and tighten gaps */
+@media (max-width: 600px) {
+  .nav-list {
+    gap: 1rem;           /* smaller gap so more links fit per row */
+  }
+  .nav-list li a {
+    font-size: 0.7em;    /* 0.7 * 20px ≈ 14px */
+  }
+}
