@@ -1,4 +1,4 @@
-/* Make the entire page background pure black */
+/* Ensure the entire page background is pure black */
 html,
 body {
   margin: 0;
@@ -6,7 +6,7 @@ body {
   background-color: #000000;
 }
 
-/* Ensure the banner image spans the full width */
+/* Make the banner image span full width */
 .banner-image {
   display: block;
   width: 100%;
