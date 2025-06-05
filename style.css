@@ -12,7 +12,7 @@ body {
   background-color: #000000;
   color: #fff;
   font-family: 'Special Elite', cursive;
-  font-size: 16px;
+  font-size: 127px;
   line-height: 1.2;
 }
 
@@ -35,7 +35,7 @@ body {
 .top-nav {
   background-color: #000000;
   padding: 0.5rem 0;
-  border-bottom: 1px solid #222;
+  /* border-bottom: 1px solid #222;  <-- removed to eliminate the line */
 }
 
 /* Horizontal list */
