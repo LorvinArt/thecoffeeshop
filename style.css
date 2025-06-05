@@ -99,6 +99,6 @@ body {
     gap: 1rem;           /* smaller gap so more links fit per row */
   }
   .nav-list li a {
-    font-size: 0.7em;    /* 0.7 * 20px ≈ 14px */
+    font-size: 0.5em;    /* 0.5 * 20px ≈ 10px */
   }
 }
