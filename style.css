@@ -25,13 +25,16 @@ body {
   border-bottom: 1px solid #222; /* subtle separation line */
 }
 
+/* Make the list items sit in a single horizontal row */
 .nav-list {
   list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  display: flex;            /* horizontal layout */
+  flex-direction: row;      /* ensure they're all in one row */
+  justify-content: center;  /* center the row */
+  gap: 2rem;                /* space between links */
 }
 
+/* Make each link’s text white (override default blue) */
 .nav-list li a {
   color: #ffffff;
   text-decoration: none;
@@ -39,6 +42,7 @@ body {
   text-transform: uppercase;
 }
 
+/* Underline on hover to indicate it's clickable */
 .nav-list li a:hover {
   text-decoration: underline;
 }
