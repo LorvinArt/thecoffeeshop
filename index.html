@@ -3,10 +3,271 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to My GitHub Pages Site</title>
+  <title>The Son of Han – Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- You can swap this for a real favicon if you have one -->
+  <link rel="icon" href="https://via.placeholder.com/32" />
 </head>
 <body>
-  <h1>Hello, world!</h1>
-  <p>This is my first GitHub Pages website.</p>
+  <!-- ===== HEADER / NAVBAR ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <!-- Replace with your actual logo or text -->
+        <a href="#">The Son of Han</a>
+      </div>
+      <nav class="site-nav">
+        <ul class="nav-links">
+          <li><a href="#">Coffee</a></li>
+          <li><a href="#">Apparel</a></li>
+          <li><a href="#">Mugs</a></li>
+          <li><a href="#">Hats</a></li>
+          <li><a href="#">Stickers</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+      </nav>
+      <div class="header-extras">
+        <!-- Currency dropdown -->
+        <select class="currency-selector">
+          <option value="EUR" selected>EUR</option>
+          <option value="USD">USD</option>
+          <option value="CAD">CAD</option>
+          <option value="GBP">GBP</option>
+          <option value="AUD">AUD</option>
+          <option value="NZD">NZD</option>
+          <option value="SEK">SEK</option>
+          <option value="NOK">NOK</option>
+          <option value="DKK">DKK</option>
+          <option value="PLN">PLN</option>
+          <option value="JPY">JPY</option>
+        </select>
+
+        <!-- Account / Cart placeholders -->
+        <a href="#" class="icon-link">Account</a>
+        <a href="#" class="icon-link">Cart</a>
+        <!-- Mobile menu toggle -->
+        <button class="hamburger" aria-label="Toggle menu">
+          ☰
+        </button>
+      </div>
+    </div>
+    <!-- Mobile nav menu (hidden by default) -->
+    <div class="mobile-nav-panel">
+      <ul class="mobile-nav-links">
+        <li><a href="#">Coffee</a></li>
+        <li><a href="#">Apparel</a></li>
+        <li><a href="#">Mugs</a></li>
+        <li><a href="#">Hats</a></li>
+        <li><a href="#">Stickers</a></li>
+        <li><a href="#">About</a></li>
+        <li class="mobile-divider"></li>
+        <li><span>Currency:</span>
+          <select class="currency-selector">
+            <option value="EUR" selected>EUR</option>
+            <option value="USD">USD</option>
+            <option value="CAD">CAD</option>
+            <option value="GBP">GBP</option>
+            <option value="AUD">AUD</option>
+            <option value="NZD">NZD</option>
+            <option value="SEK">SEK</option>
+            <option value="NOK">NOK</option>
+            <option value="DKK">DKK</option>
+            <option value="PLN">PLN</option>
+            <option value="JPY">JPY</option>
+          </select>
+        </li>
+        <li class="mobile-divider"></li>
+        <li><a href="#">Account</a></li>
+        <li><a href="#">Cart</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <main>
+    <!-- ===== PRODUCT GRID SECTION ===== -->
+    <section class="products">
+      <h2>Imagine Owning These!</h2>
+      <div class="product-grid">
+        <!-- Repeat these product items / swap in your own images/text/prices -->
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x300?text=Literal+Chaos+Coffee" alt="Literal Chaos Coffee" />
+          <h3>Literal Chaos Coffee</h3>
+          <p class="price">€17.43</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x300?text=ADOC+Coffee" alt="A.D.O.C. Coffee" />
+          <h3>A.D.O.C. (Attention Deficit... Oh Coffee)</h3>
+          <p class="price">€17.88</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x300?text=Procrastination" alt="Procrastination Delayed" />
+          <h3>Procrastination Delayed</h3>
+          <p class="price">€17.88</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x300?text=Imagine+Caffeine" alt="Imagine Caffeine" />
+          <h3>Imagine Caffeine</h3>
+          <p class="price">€17.88</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x300?text=Coffee+%26+Bourbon" alt="coffee & bourbon" />
+          <h3>coffee &amp; bourbon</h3>
+          <p class="price">€13.41</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x300?text=Kindly+Frick+Off" alt="Kindly Frick Off" />
+          <h3>Kindly Frick Off</h3>
+          <p class="price">€13.41</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x300?text=Han+or+Zee" alt="Han or Zee" />
+          <h3>Han or Zee</h3>
+          <p class="price">€13.41</p>
+        </div>
+        <div class="product-item">
+          <img src="https://via.placeholder.com/300x300?text=Literal+Chaos+Blend" alt="Literal Chaos Blend" />
+          <h3>Literal Chaos Blend</h3>
+          <p class="price">€22.35</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DONATION SECTION ===== -->
+    <section class="donation">
+      <h2>Thank you for your support!</h2>
+      <form class="donation-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="donor-name">Your name</label>
+          <input type="text" id="donor-name" name="donor_name" placeholder="Type your name..." required />
+        </div>
+        <div class="form-group">
+          <label for="donor-message">Message</label>
+          <textarea id="donor-message" name="donor_message" rows="4" placeholder="Leave a message..." required></textarea>
+        </div>
+        <div class="preset-buttons">
+          <button type="button" class="preset-amount">€5</button>
+          <button type="button" class="preset-amount">€9</button>
+          <button type="button" class="preset-amount">€18</button>
+          <input type="number" class="custom-amount" name="custom_amount" placeholder="Custom €" min="1" />
+        </div>
+        <button type="submit" class="btn-submit">Donate &amp; Send Message</button>
+      </form>
+    </section>
+
+    <!-- ===== SOCIAL FOLLOW SECTION ===== -->
+    <section class="social-follow">
+      <div class="social-block">
+        <h3>Follow on TikTok</h3>
+        <a href="https://www.tiktok.com" target="_blank" class="social-link">Visit channel</a>
+        <div class="social-icons">
+          <a href="https://www.tiktok.com" target="_blank">TikTok 1</a>
+          <a href="https://www.tiktok.com" target="_blank">TikTok 2</a>
+          <a href="https://www.tiktok.com" target="_blank">TikTok 3</a>
+          <a href="https://www.tiktok.com" target="_blank">TikTok 4</a>
+        </div>
+      </div>
+      <div class="social-block">
+        <h3>Follow on Instagram</h3>
+        <a href="https://www.instagram.com" target="_blank" class="social-link">Visit profile</a>
+        <div class="social-icons">
+          <a href="https://www.instagram.com" target="_blank">Insta 1</a>
+          <a href="https://www.instagram.com" target="_blank">Insta 2</a>
+          <a href="https://www.instagram.com" target="_blank">Insta 3</a>
+          <a href="https://www.instagram.com" target="_blank">Insta 4</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MEMBERSHIP SECTION ===== -->
+    <section class="membership">
+      <h2>Become a member</h2>
+      <div class="membership-card">
+        <img src="https://via.placeholder.com/150?text=CCC" alt="CCC membership badge" />
+        <div class="membership-details">
+          <h3>CCC</h3>
+          <p>€5.00 per month</p>
+          <button class="btn-join">Join now</button>
+          <p class="save-note">Save 10% if you pay annually</p>
+        </div>
+      </div>
+      <!-- Gift membership form -->
+      <div class="gift-membership">
+        <h3>Gift membership</h3>
+        <p>Your gift will be given away live at <a href="https://twitch.tv/thesonofhan" target="_blank">twitch.tv/thesonofhan</a>!</p>
+        <form action="#" method="POST" class="gift-form">
+          <label for="gift-quantity">Number of gifts:</label>
+          <select id="gift-quantity" name="gift_quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10+">10+</option>
+          </select>
+          <button type="submit" class="btn-gift-checkout">Checkout</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="#">Returns & FAQ</a>
+        <a href="#">Contact</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+      </div>
+      <div class="footer-social">
+        <a href="https://twitter.com" target="_blank">Twitter</a>
+        <a href="https://twitch.tv" target="_blank">Twitch</a>
+        <a href="https://tiktok.com" target="_blank">TikTok</a>
+        <a href="https://instagram.com" target="_blank">Instagram</a>
+        <a href="https://youtube.com" target="_blank">YouTube</a>
+        <a href="https://discordapp.com" target="_blank">Discord</a>
+      </div>
+      <div class="footer-currency">
+        <label for="footer-currency-select">Currency:</label>
+        <select id="footer-currency-select" class="currency-selector">
+          <option value="EUR" selected>EUR</option>
+          <option value="USD">USD</option>
+          <option value="CAD">CAD</option>
+          <option value="GBP">GBP</option>
+          <option value="AUD">AUD</option>
+          <option value="NZD">NZD</option>
+          <option value="SEK">SEK</option>
+          <option value="NOK">NOK</option>
+          <option value="DKK">DKK</option>
+          <option value="PLN">PLN</option>
+          <option value="JPY">JPY</option>
+        </select>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 thesonofhan</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple JS to toggle mobile menu
+    const hamburger = document.querySelector(".hamburger");
+    const mobileNav = document.querySelector(".mobile-nav-panel");
+    hamburger.addEventListener("click", () => {
+      mobileNav.classList.toggle("open");
+    });
+
+    // (Optional) Preset donation buttons: populate custom-amount on click
+    document.querySelectorAll(".preset-amount").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        document.querySelector(".custom-amount").value = btn.textContent.replace("€", "");
+      });
+    });
+  </script>
 </body>
 </html>
