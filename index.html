@@ -75,26 +75,32 @@
   </header>
 
   <main>
-    <!-- Main Banner Section -->
-    <section class="banner">
-      <img
-        src="assets/banner.png"
-        alt="The Son of Han main banner"
-        class="banner-image"
-      />
+    <!-- Welcome Text Section -->
+    <section class="text-section">
+      <h2>Welcome to The Son of Han!</h2>
+      <p>
+        We’re passionate about coffee, quality merch, and building community.
+        Check out our latest drops and join us live on Twitch and YouTube!
+      </p>
     </section>
 
-    <section class="welcome">
-  <h2>Welcome to The Son of Han!</h2>
-  <p>
-    We’re passionate about coffee, quality merch, and building community.
-    Check out our latest drops and join us live on Twitch and YouTube!
-  </p>
-</section>
+    <!-- Latest YouTube Video (from playlist) -->
+    <section id="youtube-latest" class="youtube-section" aria-labelledby="yt-heading">
+      <h2 id="yt-heading" class="section-heading">Latest YouTube Video</h2>
+      <div class="youtube-wrapper">
+        <iframe
+          src="https://www.youtube.com/embed/?listType=playlist&list=PLqAOsA4DzBkukfBUA4JY_F6sugTwX-2ma&index=0"
+          title="Latest video from The Son of Han playlist"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
 
-    <!-- Twitch Embed Section -->
+    <!-- Live on Twitch Section -->
     <section class="twitch-section" aria-labelledby="twitch-heading">
-      <h2 id="twitch-heading" class="section-heading">Live on Twitch</h2>
+      <h2 id="twitch-heading" class="twitch-heading">Live on Twitch</h2>
       <div class="twitch-wrapper">
         <iframe
           src="https://player.twitch.tv/?channel=thesonofhan&parent=lorvinart.github.io"
@@ -104,20 +110,19 @@
         ></iframe>
       </div>
     </section>
-    
-      <!-- Latest YouTube Video (from playlist) -->
-<section id="youtube-latest" class="youtube-section" aria-labelledby="yt-heading">
-  <h2 id="yt-heading" class="section-heading">Latest YouTube Video</h2>
-  <div class="youtube-wrapper">
-    <iframe
-      src="https://www.youtube.com/embed/?listType=playlist&list=PLqAOsA4DzBkukfBUA4JY_F6sugTwX-2ma&index=0"
-      title="Latest video from The Son of Han playlist"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products" aria-labelledby="featured-heading">
+      <h2 id="featured-heading">Featured Products</h2>
+      <div class="product-grid">
+        <!-- Example card; duplicate for more items -->
+        <article class="product-card">
+          <img src="assets/product-coffee.jpg" alt="Premium coffee beans bag" />
+          <h3><a href="https://thesonofhan.ca/en-eur/collections/coffee">Signature Roast</a></h3>
+          <p>Rich, bold flavor sourced ethically from Colombia.</p>
+        </article>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -127,24 +132,5 @@
       <a href="terms.html">Terms &amp; Conditions</a>
     </p>
   </footer>
-
-  <!-- YouTube Playlist Script -->
-  <script>
-    fetch('https://www.youtube.com/feeds/videos.xml?playlist_id=PLqAOsA4DzBkukfBUA4JY_F6sugTwX-2ma')
-      .then(res => res.text())
-      .then(str => new window.DOMParser().parseFromString(str, "application/xml"))
-      .then(xml => {
-        const vid = xml.querySelector('entry yt\\:videoId').textContent;
-        document.getElementById('yt-video-container').innerHTML = \`
-          <iframe
-            src="https://www.youtube.com/embed/\${vid}"
-            title="Latest YouTube video"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen>
-          </iframe>\`;
-      })
-      .catch(err => console.error('YouTube embed error:', err));
-  </script>
 </body>
 </html>
