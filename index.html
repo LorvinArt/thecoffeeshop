@@ -85,7 +85,17 @@
         class="banner-image"
       />
     </section>
-
+    
+    <!-- ====================================
+         Latest YouTube Video (from playlist)
+         ==================================== -->
+    <section id="youtube-latest" class="youtube-section" aria-labelledby="yt-heading">
+      <h2 id="yt-heading" class="section-heading">Latest YouTube Video</h2>
+      <div id="yt-video-container" class="youtube-wrapper">
+        <!-- JS will inject the <iframe> here -->
+      </div>
+    </section>
+    
     <!-- Twitch Embed Section -->
     <section class="twitch-section" aria-labelledby="twitch-heading">
       <h2 id="twitch-heading" class="visually-hidden">Live on Twitch</h2>
@@ -129,5 +139,24 @@
       <a href="terms.html">Terms &amp; Conditions</a>
     </p>
   </footer>
+  <script>
+  // Fetch the YouTube playlist RSS and grab the first entry’s video ID
+  fetch('https://www.youtube.com/feeds/videos.xml?playlist_id=PLqAOsA4DzBkukfBUA4JY_F6sugTwX-2ma')
+    .then(res  => res.text())
+    .then(str  => new window.DOMParser().parseFromString(str, "application/xml"))
+    .then(xml  => {
+      const vid = xml.querySelector('entry yt\\:videoId').textContent;
+      document.getElementById('yt-video-container').innerHTML = `
+        <iframe
+          src="https://www.youtube.com/embed/${vid}"
+          title="Latest video from playlist"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>`;
+    })
+    .catch(err => console.error('YouTube embed error:', err));
+</script>
+
 </body>
 </html>
