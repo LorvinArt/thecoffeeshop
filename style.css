@@ -1,137 +1,89 @@
-/* ----------------------------------
-   RESET + GLOBAL
------------------------------------ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Visually hidden (for accessibility) */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
-html,
-body {
-  background-color: #000000;
-  color: #fff;
-  font-family: 'Special Elite', cursive;
-  font-size: 20px; /* base font-size */
-  line-height: 1.2;
-}
-
-/* ----------------------------------
-   TOP BANNER (CCC)
------------------------------------ */
-.top-banner {
-  width: 100%;
-  background-color: #000000;
-}
-.top-banner-image {
-  display: block;
-  width: 100%;
-  height: auto;
-}
-
-/* ----------------------------------
-   TOP NAVIGATION BAR
------------------------------------ */
-.top-nav {
-  background-color: #000000;
-  padding: 0.5rem 0;
-}
-
-/* Flexible horizontal list, wraps if necessary */
-.nav-list {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+/* Featured Products Section */
+.featured-products {
+  max-width: 1200px;
+  margin: 2rem auto;
   padding: 0 1rem;
+  text-align: center;
 }
-
-/* Links in white and uppercase */
-.nav-list li a {
-  color: #ffffff;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 1em;     /* 1em = 20px */
-  white-space: nowrap;
+.featured-products h2 {
+  font-size: 2em;
+  margin-bottom: 1rem;
 }
-
-.nav-list li a:hover {
-  text-decoration: underline;
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
-
-/* Highlight the active nav link */
-.nav-list li a.active {
-  text-decoration: underline;
+.product-card {
+  background: #111;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.5);
 }
-
-/* ----------------------------------
-   MAIN BANNER
------------------------------------ */
-.banner-image {
-  display: block;
+.product-card img {
   width: 100%;
   height: auto;
+  border-radius: 0.25rem;
+}
+.product-card h3 {
+  font-size: 1.2em;
+  margin: 0.75rem 0 0.5rem;
+}
+.product-card p {
+  font-size: 0.9em;
 }
 
-/* ----------------------------------
-   EMBEDDED TWITCH (MADE BIGGER)
------------------------------------ */
-.twitch-section {
-  display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.twitch-wrapper {
-  width: 100%;
-  max-width: 800px;  /* was 640px */
-  height: auto;
-}
-
-.twitch-wrapper iframe {
-  width: 100%;
-  height: 450px;     /* was 360px */
-  border: 0;
-}
-
-/* ----------------------------------
-   MOBILE ADJUSTMENTS (≤ 600px)
------------------------------------ */
-@media (max-width: 600px) {
-  /* Shrink embed height to 300px on phones */
-  .twitch-wrapper iframe {
-    height: 300px;
-  }
-}
-
-/* ----------------------------------
-   COFFEETALK PAGE
------------------------------------ */
-.coffee-section {
+/* Blog Preview Section */
+.blog-preview {
   max-width: 800px;
   margin: 2rem auto;
   padding: 0 1rem;
 }
-.coffee-section h1 {
-  font-size: 2.5em;
-  margin-bottom: 0.5em;
+.blog-preview h2 {
+  font-size: 2em;
+  margin-bottom: 0.5rem;
 }
-.coffee-section h2 {
-  font-size: 1.5em;
-  margin: 1.5rem 0 0.5rem;
+.blog-preview ul {
+  list-style: none;
+  padding-left: 0.5rem;
 }
-.coffee-section p {
-  margin-bottom: 1rem;
+.blog-preview li {
+  margin-bottom: 0.75rem;
 }
-.coffee-section ul {
-  list-style: disc inside;
-  margin-bottom: 1rem;
+.blog-preview a {
+  color: #f0f0f0;
+  text-decoration: none;
 }
-.coffee-image {
-  display: block;
-  width: 100%;
-  height: auto;
-  margin: 1rem 0;
+.blog-preview a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.site-footer {
+  background: #000;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  margin-top: 2rem;
+  border-top: 1px solid #333;
+}
+.site-footer p {
+  font-size: 0.9em;
+  margin-bottom: 0.5rem;
+}
+.site-footer a {
+  color: #ccc;
+  text-decoration: none;
+}
+.site-footer a:hover {
+  text-decoration: underline;
 }
