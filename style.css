@@ -182,3 +182,18 @@ body {
 .site-footer a:hover {
   text-decoration: underline;
 }
+/* Generic Text Section */
+.welcome {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.welcome h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.welcome p {
+  font-size: 1em;
+  line-height: 1.4;
+}
+
