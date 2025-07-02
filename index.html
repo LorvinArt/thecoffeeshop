@@ -9,13 +9,13 @@
 
   <!-- SEO Meta Tags -->
   <title>The Son of Han – Coffee, Apparel & More</title>
-  <meta name="description" content="Discover premium coffee, unique apparel, mugs, hats & stickers from The Son of Han. Shop our curated collections and catch us live on Twitch!" />
-  <meta name="keywords" content="coffee, apparel, mugs, hats, stickers, The Son of Han, Twitch streamer merch" />
+  <meta name="description" content="Discover premium coffee, unique apparel, mugs, hats & stickers from The Son of Han. Shop our curated collections and catch us live on Twitch and YouTube!" />
+  <meta name="keywords" content="coffee, apparel, mugs, hats, stickers, The Son of Han, Twitch streamer merch, YouTube" />
   <link rel="canonical" href="https://lorvinart.github.io/" />
 
   <!-- Open Graph / Facebook -->
   <meta property="og:title" content="The Son of Han – Coffee, Apparel & More" />
-  <meta property="og:description" content="Discover premium coffee, unique apparel, mugs, hats & stickers from The Son of Han. Shop our curated collections and catch us live on Twitch!" />
+  <meta property="og:description" content="Discover premium coffee, unique apparel, mugs, hats & stickers from The Son of Han. Shop our curated collections and catch us live on Twitch and YouTube!" />
   <meta property="og:image" content="https://lorvinart.github.io/assets/og-image.jpg" />
   <meta property="og:url" content="https://lorvinart.github.io/" />
   <meta property="og:type" content="website" />
@@ -23,7 +23,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="The Son of Han – Coffee, Apparel & More" />
-  <meta name="twitter:description" content="Discover premium coffee, unique apparel, mugs, hats & stickers from The Son of Han. Shop our curated collections and catch us live on Twitch!" />
+  <meta name="twitter:description" content="Discover premium coffee, unique apparel, mugs, hats & stickers from The Son of Han. Shop our curated collections and catch us live on Twitch and YouTube!" />
   <meta name="twitter:image" content="https://lorvinart.github.io/assets/og-image.jpg" />
 
   <!-- JSON-LD Structured Data -->
@@ -63,9 +63,7 @@
     <!-- Top Navigation Bar -->
     <nav class="top-nav" aria-label="Main navigation">
       <ul class="nav-list">
-        <!-- Feel free to add new nav items here -->
         <li><a href="https://thesonofhan.ca/en-eur/collections/coffee" target="_blank">Coffee</a></li>
-        <li><a href="coffeetalk.html">Coffeetalk</a></li>
         <li><a href="https://thesonofhan.ca/en-eur/collections/apparel-and-stickers" target="_blank">Apparel</a></li>
         <li><a href="https://thesonofhan.ca/en-eur/collections/calm-your-tits" target="_blank">Mugs</a></li>
         <li><a href="https://thesonofhan.ca/en-eur/collections/hats" target="_blank">Hats</a></li>
@@ -85,17 +83,15 @@
         class="banner-image"
       />
     </section>
-    
-    <!-- ====================================
-         Latest YouTube Video (from playlist)
-         ==================================== -->
+
+    <!-- Latest YouTube Video (from playlist) -->
     <section id="youtube-latest" class="youtube-section" aria-labelledby="yt-heading">
       <h2 id="yt-heading" class="section-heading">Latest YouTube Video</h2>
       <div id="yt-video-container" class="youtube-wrapper">
-        <!-- JS will inject the <iframe> here -->
+        <!-- JS injects the <iframe> -->
       </div>
     </section>
-    
+
     <!-- Twitch Embed Section -->
     <section class="twitch-section" aria-labelledby="twitch-heading">
       <h2 id="twitch-heading" class="visually-hidden">Live on Twitch</h2>
@@ -109,26 +105,17 @@
       </div>
     </section>
 
-    <!-- New Section: Featured Products -->
+    <!-- Featured Products Section -->
     <section class="featured-products" aria-labelledby="featured-heading">
       <h2 id="featured-heading">Featured Products</h2>
       <div class="product-grid">
-        <!-- Example product card; duplicate & swap content as you add items -->
+        <!-- Example card; duplicate for more items -->
         <article class="product-card">
           <img src="assets/product-coffee.jpg" alt="Premium coffee beans bag" />
           <h3><a href="https://thesonofhan.ca/en-eur/collections/coffee">Signature Roast</a></h3>
           <p>Rich, bold flavor sourced ethically from Colombia.</p>
         </article>
       </div>
-    </section>
-
-    <!-- New Section: Latest Blog Posts -->
-    <section class="blog-preview" aria-labelledby="blog-heading">
-      <h2 id="blog-heading">From Coffeetalk</h2>
-      <ul>
-        <li><a href="coffeetalk.html#post1">How to Brew the Perfect Cup at Home</a></li>
-        <li><a href="coffeetalk.html#post2">5 Apparel Picks for Streamers</a></li>
-      </ul>
     </section>
   </main>
 
@@ -139,24 +126,24 @@
       <a href="terms.html">Terms &amp; Conditions</a>
     </p>
   </footer>
-  <script>
-  // Fetch the YouTube playlist RSS and grab the first entry’s video ID
-  fetch('https://www.youtube.com/feeds/videos.xml?playlist_id=PLqAOsA4DzBkukfBUA4JY_F6sugTwX-2ma')
-    .then(res  => res.text())
-    .then(str  => new window.DOMParser().parseFromString(str, "application/xml"))
-    .then(xml  => {
-      const vid = xml.querySelector('entry yt\\:videoId').textContent;
-      document.getElementById('yt-video-container').innerHTML = `
-        <iframe
-          src="https://www.youtube.com/embed/${vid}"
-          title="Latest video from playlist"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>`;
-    })
-    .catch(err => console.error('YouTube embed error:', err));
-</script>
 
+  <!-- YouTube Playlist Script -->
+  <script>
+    fetch('https://www.youtube.com/feeds/videos.xml?playlist_id=PLqAOsA4DzBkukfBUA4JY_F6sugTwX-2ma')
+      .then(res => res.text())
+      .then(str => new window.DOMParser().parseFromString(str, "application/xml"))
+      .then(xml => {
+        const vid = xml.querySelector('entry yt\\:videoId').textContent;
+        document.getElementById('yt-video-container').innerHTML = \`
+          <iframe
+            src="https://www.youtube.com/embed/\${vid}"
+            title="Latest YouTube video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>\`;
+      })
+      .catch(err => console.error('YouTube embed error:', err));
+  </script>
 </body>
 </html>
